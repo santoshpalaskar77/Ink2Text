@@ -12,3 +12,10 @@
    - checkpont_for_text is for formula and text head: image contains formula and images. It can also be used for formula recognition, or we can use TexTeller as it is mainly trained for formula recognition
    - checkpoint_text is for text recognition
 - Put checkpoints in the directory "checkpoints"
+## Running code using interface 
+- Run the sh file in the terminal: ./start_web.sh
+- You can open the link in the browser
+  
+![ink22text](https://github.com/user-attachments/assets/0777ef87-979d-4e11-86e9-d25257c9f1c3)
+
+- You can upload the desired file PNG/JGP/PDF and it will produce the corresponding latex tex file, and pdf file it also correct the grammatical mistakes
