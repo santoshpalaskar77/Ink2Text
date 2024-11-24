@@ -25,3 +25,22 @@
 - Use the finetuned texteller model by: ``` latex_rec_model = TexTeller.from_pretrained('checkpoints/checkpoint_for_text')``` in the inference.py file
 - Run the code in the terminal: ``` python inference.py -img "/path/to/image.{jpg,png}" ```
 - To apply grammatical correction, use the command ``` python inference.py -img "/path/to/image.{jpg,png}" -grammar ```
+
+## 🏋️‍♂️ Training
+
+### Dataset
+
+We provide an example dataset in the `src/models/ocr_model/train/dataset/` directory, you can place your own images in the `images/` directory and annotate each image with its corresponding formula in `formulas.jsonl`.
+
+After preparing your dataset, you need to **change the `DIR_URL` variable to your own dataset's path** in `**/train/dataset/loader.py`
+
+### Training the Model
+
+1. Modify `num_processes` in `src/train_config.yaml` to match the number of GPUs available for training (default is 1).
+2. In the `src/` directory, run the following command:
+
+   ```bash
+   accelerate launch --config_file ./train_config.yaml -m models.ocr_model.train.train
+   ```
+
+You can set your own tokenizer and checkpoint paths in `src/models/ocr_model/train/train.py` (refer to `train.py` for more information). If you are using the same architecture and vocabulary as Ink2Text, you can also fine-tune Ink2Text's default weights with your own dataset.
