@@ -16,6 +16,7 @@
    src/checkpoints
    ```
 - Download the weights [formula detection](https://drive.google.com/file/d/1aSn8nAjGXuYLI0bc1i9Qg1z4Tz0hbdY5/view?usp=drive_link) of the formula detection model to the `src/models/det_model/model/`directory
+-  By default, Ink2Text use PaddleOCR model for recognition and detection
 -  Download the PaddleOCR weights [Recognition](https://drive.google.com/file/d/1vEfregonJp4Wga8UWfYX7bPREXCmf7WL/view?usp=sharing) for the English text recognition 
 -  Download the PaddleOCR weights [Detection](https://drive.google.com/file/d/1TqOceYNw2m92ayWg9DCCbGQ_VYV3-u5C/view?usp=drive_link) for the English text detection
 -  Place the weights of the recognition/detection model in the `det/` or `rec/` directories within `src/models/third_party/paddleocr/checkpoints/`, and rename them to `default_model.onnx`.
