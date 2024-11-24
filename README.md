@@ -9,12 +9,16 @@
 ## Instructions for Running the Code
 - Must clone this repo to the desired machine
 - Download the checkpoint from: [Checkpoints](https://drive.google.com/drive/folders/1z7MMYoh_bCl0YjJm_aPhvXf68aeOL-E0?usp=drive_link)
-   - checkpoint_for_text is for formula and text head: image contains formula and images. It can also be used for formula recognition, or we can use TexTeller, as it is mainly trained for formula recognition
-   - checkpoint_text is for text recognition
-- Put checkpoints in the directory
+   - _checkpoint_for_text_ is for formula and text head: image contains formula and images. It can also be used for formula recognition, or we can use TexTeller, as it is mainly trained for formula recognition
+   - _checkpoint_text_ is for text recognition
+- Put checkpoints _checkpoint_for_text_ and _checkpoint_text_ in the directory
   ```
    src/checkpoints
    ```
+- Download the weights [formula detection](https://drive.google.com/file/d/1aSn8nAjGXuYLI0bc1i9Qg1z4Tz0hbdY5/view?usp=drive_link) of the formula detection model to the `src/models/det_model/model/`directory
+-  Download the PaddleOCR weights [Recognition](https://drive.google.com/file/d/1vEfregonJp4Wga8UWfYX7bPREXCmf7WL/view?usp=sharing) for the English text recognition 
+-  Download the PaddleOCR weights [Detection](https://drive.google.com/file/d/1TqOceYNw2m92ayWg9DCCbGQ_VYV3-u5C/view?usp=drive_link) for the English text detection
+-  Place the weights of the recognition/detection model in the `det/` or `rec/` directories within `src/models/third_party/paddleocr/checkpoints/`, and rename them to `default_model.onnx`.
 ## Running code using interface 
 - Your directory should be **src**
   ```
