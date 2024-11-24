@@ -11,10 +11,19 @@
 - Download the checkpoint from: [Checkpoints](https://drive.google.com/drive/folders/1z7MMYoh_bCl0YjJm_aPhvXf68aeOL-E0?usp=drive_link)
    - checkpoint_for_text is for formula and text head: image contains formula and images. It can also be used for formula recognition, or we can use TexTeller, as it is mainly trained for formula recognition
    - checkpoint_text is for text recognition
-- Put checkpoints in the directory ``` src/checkpoints ```
+- Put checkpoints in the directory
+  ```
+   src/checkpoints
+   ```
 ## Running code using interface 
-- Your directory should be **src**   ``` cd src ```
-- Run the sh file in the terminal: ``` ./start_web.sh ```
+- Your directory should be **src**
+  ```
+   cd src
+  ```
+- Run the sh file in the terminal:
+ ```
+ ./start_web.sh
+```
 - You can open the link in the browser
   
 ![ink22text](https://github.com/user-attachments/assets/0777ef87-979d-4e11-86e9-d25257c9f1c3)
@@ -22,9 +31,19 @@
 - You can upload the desired PNG/JGP/PDF file, which will produce the corresponding latex tex file and pdf file. It also corrects grammatical mistakes
 ## Running code using terminal 
 - inference.py can be used for inference
-- Use the finetuned texteller model by: ``` latex_rec_model = TexTeller.from_pretrained('checkpoints/checkpoint_for_text')``` in the inference.py file
-- Run the code in the terminal: ``` python inference.py -img "/path/to/image.{jpg,png}" ```
-- To apply grammatical correction, use the command ``` python inference.py -img "/path/to/image.{jpg,png}" -grammar ```
+- Use the finetuned texteller model by:
+  ```
+  latex_rec_model = TexTeller.from_pretrained('checkpoints/checkpoint_for_text')
+  ```
+  in the inference.py file
+- Run the code in the terminal:
+  ```
+  python inference.py -img "/path/to/image.{jpg,png}"
+  ```
+- To apply grammatical correction, use the command
+ ```
+python inference.py -img "/path/to/image.{jpg,png}" -grammar
+```
 
 ## 🏋️‍♂️ Training
 
