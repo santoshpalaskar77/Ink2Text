@@ -1,0 +1,6 @@
+*.onnx
+# Logs
+*.log
+
+# Temporary files
+*.tmp
