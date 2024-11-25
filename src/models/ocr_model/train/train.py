@@ -99,45 +99,7 @@ if __name__ == '__main__':
 
     # Train from scratch
     #model = TexTeller()
-    model = TexTeller.from_pretrained()#'/home/santoshpalaskar77/IE_643/TexTeller/src/models/ocr_model/train/train_result/test5/checkpoint-130930')#'/home/santoshpalaskar77/IE_643/TexTeller/src/models/ocr_model/train/train_result/test5/checkpoint-130930') #'/home/santoshpalaskar77/IE_643/TexTeller/src/models/ocr_model/train/train_result/test3/checkpoint-23850') #'/home/santoshpalaskar77/IE_643/TexTeller/src/models/ocr_model/train/train_result/test2/checkpoint-30490')
-    #model = TexTeller.from_pretrained('/home/santoshpalaskar77/IE_643/TexTeller/src/models/ocr_model/train/train_result/test2/checkpoint-4310')
-    
-    # for i in range(9):  # Adjusting to freeze layers 0 through 8
-    #     for param in model.encoder.encoder.layer[i].parameters():
-    #         param.requires_grad = False
-     # # Freeze the weights of the encoder
-    # Freeze all parameters in the encoder
-    # for param in model.encoder.encoder.parameters():
-    #     param.requires_grad = False
-
-    # Freeze the first 10 layers (layers 0 to 9) of the decoder
-    # for i in range(10):  # Adjusting to freeze layers 0 through 9
-    #     for param in model.decoder.model.decoder.layers[i].parameters():
-    #         param.requires_grad = False
-    # Check which encoder parameters are frozen
-    # print("Encoder parameters frozen status:")
-    # for name, param in model.encoder.encoder.named_parameters():
-    #     print(f"{name}: requires_grad={param.requires_grad}")
-
-    # # Check the freeze status of decoder layers
-    # print("\nDecoder layers freeze status:")
-    # for i, layer in enumerate(model.decoder.model.decoder.layers):
-    #     for name, param in layer.named_parameters():
-    #         print(f"Layer {i}, {name}: requires_grad={param.requires_grad}")
-
-    
-
-    # # Freeze the weights of the decoder
-    # for param in model.decoder.parameters():
-    #     param.requires_grad = False  # Set requires_grad to False
-
-
-    # If you want to train from pre-trained model, please modify the path to your pre-trained checkpoint
-    #+e.g.
-    #+model = TexTeller.from_pretrained(
-    #+    '/path/to/your/model_checkpoint'
-    #+)
-    
+    model = TexTeller.from_pretrained()
     
 
     enable_train = True
